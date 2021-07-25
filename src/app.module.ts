@@ -1,14 +1,14 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
+import { CategoriasModule } from './categorias/categorias.module';
+import { ProxyrmqModule } from './proxyrmq/proxyrmq.module';
 
 @Module({
   imports: [
-    ConfigModule.forRoot()
-  ],
-  controllers: [AppController],
-  providers: [AppService],
+    ConfigModule.forRoot(),
+    ProxyrmqModule,
+    CategoriasModule
+  ]
 })
 export class AppModule {}

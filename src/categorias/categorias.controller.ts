@@ -16,7 +16,7 @@ export class CategoriasController {
 
     private clientAdminBackEnd = this.clientProxySmartRankig.getClientProxyAdminBackendInstance();
 
-    @Post('categorias')
+    @Post('')
     @UsePipes(ValidationPipe)
     criarCategoria(
       @Body() criarCategoriaDto: CriarCategoriaDto
@@ -24,7 +24,7 @@ export class CategoriasController {
       this.clientAdminBackEnd.emit('criar-categoria', criarCategoriaDto);
     }
   
-    @Get('categorias')
+    @Get('')
     consultarCategorias(
       @Query('idCategoria') _id: string
     ): Observable<any> {

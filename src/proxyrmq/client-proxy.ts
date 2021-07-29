@@ -14,4 +14,16 @@ export class ClientProxySmartRanking {
         })
     }
 
+    getClientProxyDesafiosInstance(): ClientProxy {
+
+        return ClientProxyFactory.create({
+            transport: Transport.RMQ,
+            options: {
+                urls: [`amqp://user:${process.env.USERRABBIT}@${process.env.SERVERAWSEC2}/smartranking`],
+                queue: 'desafios'
+            }
+        })
+    }
+
+
 }

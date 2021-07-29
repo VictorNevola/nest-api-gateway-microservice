@@ -5,6 +5,8 @@ import { CategoriasModule } from './categorias/categorias.module';
 import { ProxyrmqModule } from './proxyrmq/proxyrmq.module';
 import { JogadoresModule } from './jogadores/jogadores.module';
 import { AwsModule } from './aws/aws.module';
+import { DesafiosModule } from './desafios/desafios.module';
+
 
 @Module({
   imports: [
@@ -12,7 +14,8 @@ import { AwsModule } from './aws/aws.module';
     ProxyrmqModule,
     CategoriasModule,
     JogadoresModule,
-    AwsModule
+    AwsModule,
+    DesafiosModule
   ]
 })
 export class AppModule {}

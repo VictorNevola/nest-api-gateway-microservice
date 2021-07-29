@@ -5,7 +5,7 @@ import { ClientProxySmartRanking } from 'src/proxyrmq/client-proxy';
 import { AtualizarCategoriaDto } from './dtos/atualizar-categoria-dto';
 import { CriarCategoriaDto } from './dtos/criar-categoria-dto';
 
-@Controller('categorias')
+@Controller('api/v1/categorias')
 export class CategoriasController {
 
     private logger = new Logger(CategoriasController.name);
